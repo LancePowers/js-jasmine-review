@@ -47,6 +47,36 @@ describe('problem 5', function() {
 });
 
 // Write a function that takes a random number from 0 to 10,0000 as an argument and calculates the sum of its digits repeatedly as long as the sum is a single digit. Return that number. For instance, if the randomized number is 1049, the function should return 5.
+describe('problem 6', function(){
+  it('should return the summed digits while less than ten',function(){
+    expect(code.summedDigits(2318,10)).toEqual(6);
+    expect(code.summedDigits(-2)).toEqual('invalid number')
+  })
+})
+
 // Write a function that takes two random numbers from 0 to 100 as arguments  and returns the smaller number that is greater than one, such that both numbers are divided by it with no remainder. For instance, for 9 and 6 you should print 3. If there isn't one, simply return "Sorry!".
+describe('problem 7', function(){
+  it('should return the smallest common denominator', function(){
+    expect(code.smallestDenom(4,8)).toEqual(2);
+    expect(code.smallestDenom(6,9)).toEqual(3);
+    expect(code.smallestDenom(0,-2)).toEqual('invalid number');
+    expect(code.smallestDenom(5,10)).toEqual('sorry');
+  })
+})
+
 // Write a function that takes two random numbers from 0 to 100 as arguments and returns their least common multiple of them.
+describe('problem 8', function(){
+  it('should return the least common multiple', function(){
+    expect(code.smallestMultiple(30,45)).toEqual(90);
+    expect(code.smallestMultiple(20,15)).toEqual(60);
+    expect(code.smallestMultiple(0,1500)).toEqual('invalid number');
+  })
+})
+
 // Write a function that takes two randomized numbers as arguments and returns their average and standard deviation.
+describe('problem 9', function(){
+  it('should return an average and smallest common denominator', function(){
+    expect(code.average(40,80)).toEqual([60,20]);
+    expect(code.average(20,100)).toEqual([60,40]);
+  })
+})
